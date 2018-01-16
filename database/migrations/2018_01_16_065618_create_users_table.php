@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddNameToAccounts extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,11 @@ class AddNameToAccounts extends Migration
      */
     public function up()
     {
-        Schema::table('accounts', function (Blueprint $table) {
-            //
-            $table->String('cccc');
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string("name");
+            $table->integer("age");
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddNameToAccounts extends Migration
      */
     public function down()
     {
-        Schema::table('accounts', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('users');
     }
 }

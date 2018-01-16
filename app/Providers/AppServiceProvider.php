@@ -16,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //监听查询事件
 
-        DB::listen(function($query){
-            echo $query->sql;
-        });
+//        DB::listen(function($query){
+//            echo $query->sql;
+//        });
     }
 
     /**

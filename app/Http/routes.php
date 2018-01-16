@@ -195,3 +195,12 @@ Route::get('404',function(){
 });
 
 
+
+//---------------使用自定义函数------------
+
+Route::get('love','DemoController@love');
+
+
+//----------------使用进行增删改查--------------
+Route::get('model','DemoController@model');
+

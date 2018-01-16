@@ -9,7 +9,11 @@ class Student extends Model{
 //    public $sex;
 //    public $age;
 //    public $name;
+    //设置表名
     protected  $table = "student";
+    //当前表的主键字段
+    public $primaryKey  = "id";
+    //时间字段
     public $timestamps = true;
     //指定允许批量赋值的字段
     protected $fillable = ['name','age','sex'];
